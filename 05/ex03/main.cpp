@@ -10,7 +10,7 @@ int main() {
 	
 	AForm* form1 = intern.makeForm("shrubbery creation", "Home");
 	AForm* form2 = intern.makeForm("robotomy request", "Bender");
-	AForm* form3 = intern.makeForm("presidential pardon", "Arthur");
+	AForm* form3 = intern.makeForm("presidential pardon", "Ino");
 	
 	std::cout << "\n=== Invalid Form ===" << std::endl;
 
@@ -26,11 +26,23 @@ int main() {
 	std::cout << "\n=== Testing a form ===" << std::endl;
 	
 	if (form1) {
-		Bureaucrat bob("Bob", 1);
-		bob.signForm(*form1);
-		bob.executeForm(*form1);
+		Bureaucrat kiba("Kiba", 1);
+		kiba.signForm(*form1);
+		kiba.executeForm(*form1);
 	}
 	
+	if (form2) {
+		Bureaucrat sasuke("Sasuke", 1);
+	sasuke.signForm(*form2);
+	sasuke.executeForm(*form2);
+	sasuke.executeForm(*form2);
+	}
+
+	if (form3) {
+		Bureaucrat Naruto("Naruto", 1);
+		Naruto.signForm(*form3);
+		Naruto.executeForm(*form3);
+	}
 	std::cout << "\n=== Cleanup ===" << std::endl;
 	
 	delete form1;
