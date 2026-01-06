@@ -1,15 +1,9 @@
 #ifndef BASE_HPP
 #define BASE_HPP
 
-#include <cstdlib>
-#include <ctime>
-#include <iostream>
-#include <exception>
-
-// Base.hpp
 class Base {
 public:
-    virtual ~Base();
+	virtual ~Base();
 };
 
 Base* generate(void);
