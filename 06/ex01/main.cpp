@@ -19,6 +19,8 @@ int main()
 	else
 		std::cout << "Error: differnt pointers" << std::endl;
 	std::cout << "Acess data trough pointer: " << ptr->id << " | " << ptr->name << " | " << ptr->value << std::endl;
+	original.id--;
+	std::cout << "Decreased id: " << original.id << std::endl;
 
 	Data* heap_data = new Data;
 	heap_data->id = 99;
@@ -35,6 +37,8 @@ int main()
 	else
 		std::cout << "Heap test: fail" << std::endl;
 	std::cout << "Acess data trough pointer: " << back->id << " | " << back->name << " | " << back->value << std::endl;
+	heap_data->id++;
+	std::cout << "Increased id: " << back->id << std::endl;
 	delete heap_data;
 	return 0;
 }
